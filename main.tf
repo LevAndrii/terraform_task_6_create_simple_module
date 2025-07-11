@@ -17,8 +17,8 @@ provider "azurerm" {
 }
 
 module "resource_group_storage" {
-  source               = "app.terraform.io/levandrii_study/resource_group_storage/azurerm"
-  version              = "1.0.7"
+  source               = "LevAndrii/rgs/azurerm"
+  version              = "1.0.0"
   rg_name              = "levandrii-tfmodule-test"
   rg_location          = "West Europe"
   storage_account_name = "tfmoduletestsa2025"
