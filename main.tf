@@ -1,0 +1,27 @@
+terraform {
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "4.34.0"
+    }
+  }
+}
+
+provider "azurerm" {
+  features {
+    resource_group {
+      prevent_deletion_if_contains_resources = true
+    }
+  }
+  subscription_id = "4a12acc1-35fb-455f-84dd-d790daaf8781"
+}
+
+
+module "resource_group_storage" {
+  source  = "app.terraform.io/levandrii_study/resource_group_storage/azurerm"
+  version = "1.0.7"
+  rg_name              = "levandrii-tfmodule-test"
+  rg_location          = "West Europe"
+  storage_account_name = "tfmoduletestsa2025"
+}
+
