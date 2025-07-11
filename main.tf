@@ -24,4 +24,4 @@ module "resource_group_storage" {
   rg_location          = "West Europe"
   storage_account_name = "tfmoduletestsa2025"
 }
-
+ 
